@@ -16,8 +16,8 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
-    // Apni Real Meta Pixel ID Yahan Dalein
-    fbq('init', '2165052384448447'); 
+    // Apni Meta Pixel ID Yahan Badlein
+    fbq('init', 'YOUR_PIXEL_ID'); 
     fbq('track', 'PageView');
   </script>
   <noscript>
@@ -95,8 +95,8 @@
     }
 
     .logo {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       border: 3px solid #ffbc00;
       box-shadow: 0 0 25px rgba(255, 188, 0, 0.5);
@@ -225,8 +225,9 @@
       <span>Community</span>
     </div>
 
+    <!-- DP Image Link -->
     <div class="logo-wrapper">
-      <img src="1000060205.png" alt="DAVID CHANNEL Logo" class="logo">
+      <img src="logo.png" alt="DAVID CHANNEL Logo" class="logo">
     </div>
 
     <h1 class="headline">
@@ -238,8 +239,8 @@
       Exclusive Telegram Community for AI Insights, Tools, and Strategies
     </p>
 
-    <!-- Click event par Meta Lead tracking auto-fire hone ke liye trackLead() function call kiya gaya hai -->
-    <a href="https://t.me/+IDmxhwzr6PIwNThl" onclick="trackLead()" class="cta-btn" target="_blank">
+    <!-- Main CTA Button + Tracking -->
+    <a href="YOUR_TELEGRAM_LINK_HERE" onclick="trackLead()" class="cta-btn" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
         <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/>
       </svg>
@@ -269,7 +270,6 @@
   </div>
 
   <script>
-    // Jab koi Telegram Button par click karega, tab Meta Ads me Lead Event track hoga
     function trackLead() {
       if (typeof fbq !== 'undefined') {
         fbq('track', 'Lead');
@@ -279,4 +279,3 @@
 
 </body>
 </html>
-

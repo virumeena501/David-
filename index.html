@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIP CHANNEL BY DAVID</title>
+
+    <!-- ======================================================= -->
+    <!-- 1. META / FACEBOOK PIXEL CODE (YAHAN APNA PIXEL ID DAALEIN) -->
+    <!-- ======================================================= -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // 👇 YOUR_PIXEL_ID Ko Apne Actual Meta Pixel ID Se Replace Karein
+    fbq('init', 'YOUR_PIXEL_ID'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" 
+             src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- ======================================================= -->
+
     <style>
         * {
             margin: 0;
@@ -38,7 +62,6 @@
             margin-bottom: 15px;
         }
 
-        /* Pure CSS Se Banaya Gaya Custom Logo Banner */
         .logo-box {
             width: 130px;
             height: 130px;
@@ -51,7 +74,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
         }
 
         .crown-icon {
@@ -172,7 +194,6 @@
 <body>
 
     <div class="card">
-        <!-- Self-Contained Built-in Logo Structure -->
         <div class="logo-container">
             <div class="logo-box">
                 <div class="crown-icon">👑</div>
@@ -199,8 +220,8 @@
             </div>
         </div>
 
-        <!-- Apna Telegram Link Yahan Badlein -->
-        <a href="YOUR_TELEGRAM_LINK_HERE" class="cta-btn" target="_blank">
+        <!-- 2. TELEGRAM LINK + BUTTON CLICK EVENT TRACKING -->
+        <a href="YOUR_TELEGRAM_LINK_HERE" class="cta-btn" target="_blank" onclick="fbq('track', 'Lead');">
             👉 JOIN VIP CHANNEL NOW 👈
         </a>
 

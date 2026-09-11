@@ -16,7 +16,7 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
-    // Apni Meta Pixel ID Yahan Badlein
+    // Apni Meta Pixel ID Yahan Badlein (2 places)
     fbq('init', 'YOUR_PIXEL_ID'); 
     fbq('track', 'PageView');
   </script>
@@ -88,20 +88,23 @@
       padding-bottom: 2px;
     }
 
-    .logo-wrapper {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-
-    .logo {
-      width: 130px;
-      height: 130px;
+    .logo-container {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 20px auto;
       border-radius: 50%;
       border: 3px solid #ffbc00;
-      box-shadow: 0 0 25px rgba(255, 188, 0, 0.5);
-      object-fit: cover;
-      background-color: #0d1527;
+      box-shadow: 0 0 25px rgba(255, 188, 0, 0.6), inset 0 0 15px rgba(0, 210, 255, 0.5);
+      background: radial-gradient(circle, #0b1329 0%, #04070d 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .logo-container svg {
+      width: 100%;
+      height: 100%;
     }
 
     .headline {
@@ -225,9 +228,48 @@
       <span>Community</span>
     </div>
 
-    <!-- Live Direct Logo Link -->
-    <div class="logo-wrapper">
-      <img src="https://i.postimg.cc/mD8N1b8Q/david-logo.png" alt="DAVID CHANNEL Logo" class="logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2111/2111646.png'">
+    <!-- Embedded High-Tech Logo Artwork (Crown + DAVID CHANNEL) -->
+    <div class="logo-container">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffe259"/>
+            <stop offset="100%" stop-color="#ffa751"/>
+          </linearGradient>
+          <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00d2ff"/>
+            <stop offset="100%" stop-color="#0088cc"/>
+          </linearGradient>
+        </defs>
+        
+        <!-- Outer Glowing Ring -->
+        <circle cx="100" cy="100" r="92" fill="none" stroke="url(#blueGrad)" stroke-width="4"/>
+        
+        <!-- Crown Art -->
+        <path d="M 60,80 L 70,50 L 85,65 L 100,40 L 115,65 L 130,50 L 140,80 Z" fill="url(#goldGrad)" />
+        <circle cx="70" cy="48" r="3" fill="#00d2ff" />
+        <circle cx="100" cy="37" r="4" fill="#00d2ff" />
+        <circle cx="130" cy="48" r="3" fill="#00d2ff" />
+        <path d="M 60,82 L 140,82 L 135,88 L 65,88 Z" fill="#ffbc00" />
+        
+        <!-- DAVID Text Art -->
+        <text x="100" y="125" font-family="'Poppins', sans-serif" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle" letter-spacing="1">
+          DAVID
+        </text>
+        <text x="100" y="125" font-family="'Poppins', sans-serif" font-weight="900" font-size="34" fill="none" stroke="url(#blueGrad)" stroke-width="1.5" text-anchor="middle" letter-spacing="1">
+          DAVID
+        </text>
+        
+        <!-- CHANNEL Text & Line -->
+        <line x1="30" y1="145" x2="60" y2="145" stroke="url(#blueGrad)" stroke-width="2"/>
+        <text x="100" y="149" font-family="'Poppins', sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle" letter-spacing="3">
+          CHANNEL
+        </text>
+        <line x1="140" y1="145" x2="170" y2="145" stroke="url(#blueGrad)" stroke-width="2"/>
+        
+        <!-- Small Crown Icon -->
+        <path d="M 94,162 L 96,156 L 100,159 L 104,156 L 106,162 Z" fill="url(#blueGrad)"/>
+      </svg>
     </div>
 
     <h1 class="headline">
@@ -239,7 +281,7 @@
       Exclusive Telegram Community for AI Insights, Tools, and Strategies
     </p>
 
-    <!-- Main CTA Button + Tracking -->
+    <!-- Telegram Action Link -->
     <a href="YOUR_TELEGRAM_LINK_HERE" onclick="trackLead()" class="cta-btn" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
         <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/>
